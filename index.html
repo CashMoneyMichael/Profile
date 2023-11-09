@@ -58,42 +58,38 @@
   method="post"
   action="https://sheetdb.io/api/v1/w9e55873rtzax">
     
-   <label for="name">Your Name:</label>
-   <input type="text" id="name" name="name" required> 
   
-   <label for="message">Your Message:</label>
-   <input type="text" id="message" name="message" required>
-  
-   <input type="submit" value="Submit">
+  <label for="name">Your Name:</label>
+  <input type="text" id="name" name="name" required> 
+ 
+  <label for="message">Your Message:</label>
+  <input type="text" id="message" name="message" required>
+
+   <button type="submit">Submit</button>
     
 </form>
 
 
 
 <script>
-  var form = document.getElementById('message-form');
-  form.addEventListener("Submit", e => {
-    e.preventDefault();
+  var form = document.getElementById('message-form')
+  form.addEventListener("Submit", i => {
+    i.preventDefault()
+
     fetch(form.action, {
         method : "POST",
         body: new FormData(document.getElementById("message-form")),
+
     }).then(
         response => response.json()
     ).then((html) => {
-      // you can put any JS code here
-      alert('success')
-    });
-  });
+
+      alert('Yipee')
+    })
+  })
+  
 </script>
-  
-  
-  
-  
-  
-  
-  
-  
+
 </main>
-<script src="sketch.js"></script>
 </body>
 </html>
