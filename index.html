@@ -76,7 +76,7 @@
     e.preventDefault();
     fetch(form.action, {
         method : "POST",
-        body: new FormData(document.getElementById("sheetdb-form")),
+        body: new FormData(document.getElementById("message-form")),
     }).then(
         response => response.json()
     ).then((html) => {
